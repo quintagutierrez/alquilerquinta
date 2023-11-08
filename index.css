@@ -95,26 +95,27 @@ b{
     height: 45vh;
 }
 /* SOBRE EL ALOJAMIENTO */
-.Opciones{
+.opciones {
     display: inline;
     height: 100%;
     width: 100%;
 }
-.op-titulo{ 
-    padding: 10px;
+#op-titulo {
+    margin-bottom: -10px; 
+    padding: 5px 10px 0; 
 }
-.descripcion{
-    margin: 0;
-    padding-left: 10px;
-    padding-right: 10px;
+.descripcion {
+    margin-top: -5px; 
+    margin-bottom: 0; 
+    padding: 0 10px; 
     font-family: Plus Jakarta Sans;
     font-weight: 400;
     font-size: 1rem;
     line-height: 1.5;
-    white-space:pre-line;
+    white-space: pre-line;
     overflow-wrap: break-word;
     text-align: justify;
-    
+    padding-bottom: 20px;
 }
 /* MAPA */
 .link-mapa{
@@ -131,27 +132,24 @@ b{
     font-size: 14px;
     text-decoration: underline;
 }
-
 /* SOBRE EL MULTIESPACIO */
 .Condiciones{
     height: 100%;
     padding: 10px;
 }
 .-titulo2{
-    padding-top: 10px;
+    padding:10px;
     }
-.p-pago{
-    padding-top: 5px;
-}
 .list-forma{
     padding-top: 8px;
     padding-bottom: 5px;
+    padding: 0 30px;
 }
 /* DESCARGAS */
 .dercargas{
-    height: 100%;
-    padding: 10px;
-    
+    height: 10%;
+    padding: 0px 20px;    
+    padding-bottom: 30px;
 }
 .text-descarga{
     list-style:inside;
@@ -159,7 +157,6 @@ b{
     font-size: 17px;
     color: black;
     text-align:left;
-
 }
 #a-descargas{
     text-decoration:underline;
@@ -167,6 +164,35 @@ b{
 #a-descargas:hover {
     text-decoration: none;
 }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: rgba(22, 20, 20, 1); /* Fondo semitransparente */
+    height: 320px;
+    width: 100% ;
+    bottom: 0;
+    padding: 0 20px;
+  }
+  .container-1 {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 30px;
+    padding-bottom: 40px;
+  }
+/* #fa.solid{
+    padding-right:20px;
+    font-size: 20px;
+    transform: translateY(14px);
+    color: red;
+  } */
+  .container-2 {
+    color: #a79393;
+    margin-left: 65px;
+    margin-top: -35px;
+  }
 /* Estilos específicos para dispositivos móviles */
 @media (max-width: 390px) {
     .caracteristicas {
@@ -184,5 +210,6 @@ b{
     }
 
 }
+
 
 
