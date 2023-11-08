@@ -20,19 +20,19 @@ b{
     margin: 0;
     font-family: Plus Jakarta Sans;
     font-weight: 300;
-    font-size: 6rem;
     line-height: 1.167;
     font-size: 2rem;
     margin-top: 16px;
     margin-bottom: 16px;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     
 }
 /* INICIO */
 .header {
     position: relative;
     height: 30vh;
+    width: 100%;
 }
 .background-image {
     width: 100%;
@@ -57,30 +57,29 @@ b{
     height: 100px;
 }
 /* SERVICIOS */
-.titulo-servicios {
-    text-align: left;
-    margin: 10px;
-    font-size: 20px;
-}
 .caracteristicas {
-    height: 100%;
-    padding: 10px;
+    margin: 0 auto; /* Esto centra el contenedor */
+    max-width: 900px; /* Establece un ancho máximo para la sección */
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around; /* Ajusta el espacio alrededor de las columnas */
 }
+
+/* Establecer el ancho de cada columna */
 .sub-caracteristicas {
+    width: calc(33.33% - 20px); /* Establece el ancho de cada columna */
+    margin: 6px; /* Espacio entre las columnas */
     color: #000000;
     border: solid rgb(184, 205, 184) 1.5px;
-    font-size: 17px;
-    margin: 5px;
-    padding: 10px;
+    font-size: 1rem !important;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    flex: 0 0 calc(25% - 20px); /* Tamaño de 25% - 20px entre elementos */
 }
+
 /* FOTOS */
 .fotos {
     display: flex;
