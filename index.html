@@ -34,18 +34,22 @@
     </div>
 <!-- FOTOS -->
 <div class="separador"></div>
-     <div>
-        <h2 class="titulos">Fotos del espacio:</h2>
-        <div class="fotos">
-            <img src="foto1.jpg" class="fotos-espacio">
+<div>
+    <h2 class="titulos">Fotos del espacio:</h2>
+    <div class="fotos-container">
+        <div class="fotos" id="contenedorFotos">
             <img src="foto2.jpg" class="fotos-espacio">
             <img src="foto3.jpg" class="fotos-espacio">
+            <img src="foto1.jpg" class="fotos-espacio">
             <img src="foto4.jpg" class="fotos-espacio">
             <img src="foto5.jpg" class="fotos-espacio">
             <img src="foto6.jpeg" class="fotos-espacio">
-            <img src="foto6.jpeg" class="fotos-espacio">
+            <img src="foto7.jpeg" class="fotos-espacio">
         </div>
-     </div>    
+        <div class="indicador" id="indicadorDeslizar">1/7</div>
+    </div>
+</div>
+
 <!-- SOBRE EL ALOJAMIENTO -->
 <div class="separador"></div>
     <div class="opciones">
@@ -108,14 +112,46 @@
         <p href="" class="container-1"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Direccion</p>
         <p class="container-2">Buenos Aires - Argentina</p>
       </footer>
+
+      
       <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XT6KNPHKNT"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-XT6KNPHKNT');
+
+
+// FOTOS
+
+  window.addEventListener('DOMContentLoaded', function() {
+    const contenedorFotos = document.getElementById('contenedorFotos');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+    const indicadorDeslizar = document.getElementById('indicadorDeslizar');
+
+    const actualizarIndicador = () => {
+        const cantidadFotos = fotos.length;
+        const anchoImagen = contenedorFotos.clientWidth / cantidadFotos;
+        const fotoActual = Math.round(contenedorFotos.scrollLeft / anchoImagen) + 1;
+        
+        // Asegurarse de que el número de la foto actual esté en el rango adecuado
+        const fotoVisible = fotoActual > cantidadFotos ? cantidadFotos : fotoActual;
+
+        indicadorDeslizar.textContent = fotoVisible + '/' + cantidadFotos;
+    };
+
+    // Actualizar el indicador al cargar la página
+    actualizarIndicador();
+
+    contenedorFotos.addEventListener('scroll', function() {
+        actualizarIndicador();
+    });
+});
+
 </script>
 </body>
 </html>
+
