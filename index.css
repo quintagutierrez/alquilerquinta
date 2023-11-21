@@ -159,12 +159,14 @@ b{
     padding: 10px;
 }
 .-titulo2{
-    padding:10px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
     }
 .list-forma{
     padding-top: 8px;
     padding-bottom: 5px;
-    padding: 0 30px;
+    padding: 0 2px;
+    font-size: .9rem ;
 }
 /* DESCARGAS */
 .dercargas{
@@ -203,12 +205,6 @@ footer{
     padding: 30px;
     padding-bottom: 40px;
   }
-/* #fa.solid{
-    padding-right:20px;
-    font-size: 20px;
-    transform: translateY(14px);
-    color: red;
-  } */
   .container-2 {
     color: #a79393;
     margin-left: 65px;
@@ -231,6 +227,7 @@ footer{
     }
 
 }
+
 
 
 
