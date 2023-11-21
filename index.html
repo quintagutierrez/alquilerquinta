@@ -300,9 +300,28 @@ window.mostrarImagenAnterior = function () {
         document.getElementById('indicadorDeslizarModal').textContent = fotoAnteriorNumero + '/' + cantidadFotos;
     }
 };
-
 // ...
 
+window.abrirModal = function (imagenSrc) {
+    const modal = document.getElementById('modalImagen');
+    const imagenModal = document.getElementById('imagenModal');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+
+    // Configurar la imagen en el modal
+    imagenModal.src = imagenSrc;
+
+    // Mostrar el modal
+    modal.style.display = 'flex';  // Cambiar a flex para centrar vertical y horizontalmente
+
+    // Actualizar el indicador en el modal
+    const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenSrc) + 1;
+    const cantidadFotos = fotos.length;
+    document.getElementById('indicadorDeslizarModal').textContent = fotoActual + '/' + cantidadFotos;
+
+    // Agregar eventos de deslizamiento en el modal
+    modal.addEventListener('touchstart', handleTouchStart, false);
+    modal.addEventListener('touchmove', handleTouchMove, false);
+};
 </script>
 </body>
 </html>
